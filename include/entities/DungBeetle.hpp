@@ -16,10 +16,11 @@ private:
     static constexpr const char* spriteFilePath = "data/textures/dungbeetle_spritesheet.png";
     static constexpr glm::vec2 spriteSize = {0.1, 0.1};
 
-    static constexpr float SPEED = 0.5f;
+    static constexpr float SPEED = 0.05f;
     static constexpr int MAX_HEALTH = 100;
 
     int getMaxHealth() const override;
     float getSpeed() const override;
     void calculateWaypoints(const TopographyVertices& topVertices) override;
+    bool validAttackPosition(const TopographyVertices &topVertices) override;
 };
