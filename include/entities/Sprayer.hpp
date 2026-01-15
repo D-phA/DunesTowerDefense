@@ -11,12 +11,15 @@ public:
     explicit Sprayer(glm::vec2 position);
 private:
     static constexpr const char* spriteFilePath = "data/textures/gas_spritesheet.png";
-    static constexpr glm::vec2 spriteSize = {150, 120};
+    static constexpr glm::vec2 spriteSize = {200, 160};
 
-    static constexpr float ATTACK_COOLDOWN = 2.f;
-    static constexpr int ATTACK_RANGE = 100;
+    static constexpr float ATTACK_COOLDOWN = 0.1f;
+    static constexpr int ATTACK_RANGE = 80;
 
     float getAttackCooldown() const override { return ATTACK_COOLDOWN; }
-    int getAttackRange() const override { return ATTACK_RANGE; }
-    void attack() override;
+    // void updateAnimation() override;
+    // int getAttackRange() const override { return ATTACK_RANGE; }
+    void findEnemy(const std::vector<std::unique_ptr<Enemy>>& enemies) override;
+    bool enemyValid() const override;
+    void attack(std::vector<std::unique_ptr<Projectile>>& projectiles) override;
 };
