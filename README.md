@@ -33,8 +33,7 @@ against waves of enemies pathing over the changing landscape.
 This is my personal, correctly-attributed copy of a **Build18 team project**. It
 was built collaboratively over the hackathon; commit authorship in this fork is
 set to me by agreement among the team so each of us can showcase the work under
-our own account. The original team repository is by my teammate **Sami Sharif**:
-https://github.com/sshar1/DunesTowerDefense
+our own account.
 
 My work centered on the computer-vision and terrain pipeline: depth-camera
 heightmap reconstruction, OpenCV tower-piece detection, and enemy pathfinding
